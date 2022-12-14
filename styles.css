@@ -30,6 +30,14 @@ h1{
     padding-right:15px;  
 
 }
+.books .card{
+    background-color:#ffff;
+    color:black;
+    text-align:center;
+    height:400px;
+    display:grid;
+}
 .card{
     border-radius:20px;
 }
+
