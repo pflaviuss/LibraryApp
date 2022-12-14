@@ -41,3 +41,27 @@ h1{
     border-radius:20px;
 }
 
+#add-book{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  
+    align-items:center;
+    justify-content: center;
+    
+}
+#add-book-form{
+    height:5vh;
+    width:40vw;
+   
+}
+.is-read{
+    display:flex;
+    gap:15px;
+}
+.checkbox{
+    width:20px;
+    height:20px;
+    margin-top:4px;
+    accent-color:white;
+}

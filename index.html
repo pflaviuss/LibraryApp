@@ -25,9 +25,11 @@
             <label for="Author">Author:</label>
             <input type="text" id="Author" name="Author" />
             <label for="Pages">Pages:</label>
-            <input type="text" id="Pages" name="Pages" />
-            <label for="Read">Read:</label>
-            <input type="text" id="Read" name="Read" />
+            <input type="number" id="Pages" name="Pages" />
+            <div class="is-read"><label for="Read">Have you read it?</label>
+                <input class="checkbox"type="checkbox" id="Read" name="Read" />
+            </div>
+            
           </form>
           <button type="submit" class="submit-button">Submit to library</button>
           <button type="reset" class="reset-button">Reset</button>

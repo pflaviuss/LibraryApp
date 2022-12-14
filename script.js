@@ -18,6 +18,7 @@ function Book(Title,Author, Pages, Read){
 //Function for adding a new book to the array
 
 
+
 function addBookToLibray(Title, Author, Pages, Read){
     let book = new Book(Title, Author, Pages, Read);
     myLibrary.push(book);
@@ -26,6 +27,13 @@ function addBookToLibray(Title, Author, Pages, Read){
 
 function displayBooksOnPage(){
     const books = document.querySelector(".books");
+
+    //Remove all previously displayed cards before I loop over array again
+    const removeDivs = document.querySelectorAll(".card");
+    console.log("show me the node count of current card divs...", removeDivs);
+    for(let i = 0; i< removeDivs.length; i++){
+        removeDivs[i].remove();
+    }
     
     //Loop over the library array and display to the cards
     myLibrary.forEach(myLibrary =>{
@@ -60,12 +68,19 @@ function intakeFormData(){
     let Author = document.getElementById("Author").value;
     let Pages = document.getElementById("Pages").value;
     let Read = document.getElementById("Read").value;
-
+    if(Read.checked){
+        //update the text content of the <p> tag
+        document.getElementById("Read").textContent== "Read";
+       
+    }else{
+        document.getElementById("Read").textContent== "Not read";
+    }
+    
     //Break out if form is incomplete or not valid 
     if((Title == "") || (Author == "") || (Pages == "") || (Read == "")){
         return;
     }
-
+    
     //Call function to input the book data to array
 
     addBookToLibray(Title, Author, Pages, Read);
@@ -75,6 +90,14 @@ function intakeFormData(){
 
 }
 
+//Start event listener for clear form button
+
+const clearButton = document.querySelector(".reset-button");
+clearButton.addEventListener("click", clearForm);
+
+function clearForm(){
+    document.getElementById("add-book").reset();
+}
 
 
 
