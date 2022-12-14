@@ -5,13 +5,13 @@ let myLibrary= [];
 
 //Object constructor function 
 function Book(Title,Author, Pages, Read){
-    this.Title = title;
-    this.Author = author;
-    this.Pages = pages;
-    this.Read = read;
-    this.info = function(){
-        return(title + author + ", " + pages)
-    }
+    this.Title = Title;
+    this.Author = Author;
+    this.Pages = Pages;
+    this.Read = Read;
+    // this.info = function(){
+    //     return(Title + Author + ", " + Pages + ", " + Read)
+    // }
 }
 
 
@@ -39,3 +39,12 @@ function displayBooksOnPage(){
         }
     })
 }
+
+
+addBookToLibray("The hoobit", "J.R.R. Tolkien", "200 pages", "not read");
+addBookToLibray("The hoobit", "J.R.R. Tolkien", "200 pages", "not read");
+addBookToLibray("The hoobit", "J.R.R. Tolkien", "200 pages", "not read");
+addBookToLibray("The hoobit", "J.R.R. Tolkien", "200 pages", "not read");
+console.log("End of code array contents", myLibrary);
+
+displayBooksOnPage();
