@@ -67,14 +67,30 @@ function intakeFormData(){
     let Title = document.getElementById("Title").value;
     let Author = document.getElementById("Author").value;
     let Pages = document.getElementById("Pages").value;
-    let Read = document.getElementById("Read").value;
-    if(Read.checked){
-        //update the text content of the <p> tag
-        document.getElementById("Read").textContent== "Read";
-       
-    }else{
-        document.getElementById("Read").textContent== "Not read";
+    
+
+    function validate(){
+        let Read = document.querySelector('input[type=checkbox]');
+        if(Read.checked){
+            document.getElementById("Read").textContent= "Is read";
+        } else{
+            document.getElementById("Read").textContent== "Not read";
+        }
     }
+    // Read.addEventListener('change',e =>{
+    //     if(e.target.checked === true){
+    //         document.getElementById("Read").textContent= "Is read";
+    //     } if (e.target.checked === false){
+    //         document.getElementById("Read").textContent== "Not read";
+    //     }
+    // })
+    // if(Read.checked){
+    //     //update the text content of the <p> tag
+    //     document.getElementById("Read").textContent= "Is read";
+       
+    // }else{
+        
+    // }
     
     //Break out if form is incomplete or not valid 
     if((Title == "") || (Author == "") || (Pages == "") || (Read == "")){
