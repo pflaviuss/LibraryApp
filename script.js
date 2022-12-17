@@ -67,16 +67,19 @@ function intakeFormData(){
     let Title = document.getElementById("Title").value;
     let Author = document.getElementById("Author").value;
     let Pages = document.getElementById("Pages").value;
+    let Read = document.getElementById("Read").value;
     
 
-    function validate(){
-        let Read = document.querySelector('input[type=checkbox]');
-        if(Read.checked){
-            document.getElementById("Read").textContent= "Is read";
-        } else{
-            document.getElementById("Read").textContent== "Not read";
-        }
-    }
+    // function validate(){
+    //     let Read = document.getElementById('Read');
+    //     console.log(Read);
+    //     if(Read.checked){
+    //         document.getElementById("Read").textContent= "Is read";
+    //     } else{
+    //         document.getElementById("Read").textContent== "Not read";
+    //     }
+    //     console.log(Read);
+    // }
     // Read.addEventListener('change',e =>{
     //     if(e.target.checked === true){
     //         document.getElementById("Read").textContent= "Is read";
@@ -84,13 +87,12 @@ function intakeFormData(){
     //         document.getElementById("Read").textContent== "Not read";
     //     }
     // })
-    // if(Read.checked){
-    //     //update the text content of the <p> tag
-    //     document.getElementById("Read").textContent= "Is read";
-       
-    // }else{
-        
-    // }
+    if(Read.value){
+        //update the text content of the <p> tag
+        document.getElementById("Read").textContent= "Is read";
+    }else{
+        document.getElementById("Read").textContent= "Not read";
+    }
     
     //Break out if form is incomplete or not valid 
     if((Title == "") || (Author == "") || (Pages == "") || (Read == "")){
@@ -125,3 +127,5 @@ function clearForm(){
 console.log("End of code array contents", myLibrary);
 
 displayBooksOnPage();
+
+
