@@ -67,7 +67,7 @@ function intakeFormData(){
     let Title = document.getElementById("Title").value;
     let Author = document.getElementById("Author").value;
     let Pages = document.getElementById("Pages").value;
-    let Read = document.getElementById("Read").value;
+    // let Read = document.getElementById("Read").value;
     
 
     // function validate(){
@@ -87,13 +87,20 @@ function intakeFormData(){
     //         document.getElementById("Read").textContent== "Not read";
     //     }
     // })
-    if(Read.value){
-        //update the text content of the <p> tag
-        document.getElementById("Read").textContent= "Is read";
-    }else{
-        document.getElementById("Read").textContent= "Not read";
-    }
+    // if(Read.value){
+    //     //update the text content of the <p> tag
+    //     document.getElementById("Read").textContent= "Is read";
+    // }else{
+    //     document.getElementById("Read").textContent= "Not read";
+    // }
     
+    let ReadChkBox= document.querySelector('input[type=checkbox]');
+    let Read = "Not read";
+    if (ReadChkBox.checked){
+        Read = "Is read";
+    }
+
+
     //Break out if form is incomplete or not valid 
     if((Title == "") || (Author == "") || (Pages == "") || (Read == "")){
         return;
